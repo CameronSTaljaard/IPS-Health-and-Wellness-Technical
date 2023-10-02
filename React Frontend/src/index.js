@@ -15,27 +15,28 @@ import "./css/index.css";
 export default function App() {
   const { token, setToken } = useToken();
 
-  if(!token) {
-    return <Login setToken={setToken} />
+    if (!token) {
+      return <Login setToken={setToken} />
+    }
+
+
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />} >
+            <Route index element={<TempHome />} />
+            <Route path="/product/:productID" element={<ProductPage />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+          <Route path="*" element={<LayoutNoNav />} >
+            <Route path="*" element={<NoPage />} >
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    );
   }
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />} >
-          <Route index element={<TempHome />} />
-          <Route path="/product" element={<ProductPage />} />
-          <Route path="/contact" element={<Contact />} />
-        </Route>
-        <Route path="*" element={<LayoutNoNav />} >
-          <Route path="*" element={<NoPage />} >
-        </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-}
+  const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(<App />);
+  root.render(<App />);
