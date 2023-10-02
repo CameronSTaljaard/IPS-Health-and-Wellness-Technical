@@ -1,0 +1,26 @@
+.page-header {
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+}
+
+.page-header span {
+    color: red;
+}
+
+/* Destination images styling */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.column {
+    padding: 15px;
+}
+
+.img-fluid {
+    border-radius: 8px;
+    margin-bottom: 8px;
+}

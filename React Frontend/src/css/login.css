@@ -1,0 +1,86 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-header {
+    position: absolute;
+    top: 200px;
+    font-size: 50px;
+    margin: auto 0;
+    color: white;
+}
+
+.login-card {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border-top: 4px solid rebeccapurple;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-input {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+  
+.login-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+  
+.login-button {
+    padding: 10px 20px;
+    background-color: rebeccapurple;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.register-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+@media (max-width: 480px) {
+    .login-card {
+      width: 100%;
+      max-width: 300px;
+    }
+}
+  
+
+/* .full-container {
+    background-color: #8f8f8f;
+    height: 100vh;
+    width: 100%;
+} */
+
+.full-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("../../public/images/outerspace.jpg") no-repeat center center fixed;
+    height: 100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
