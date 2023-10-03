@@ -15,8 +15,8 @@ class Navbar extends Component {
                 <Link to="/" className='navbar__title navbar__item' style={linkStyle}>
                     IPS-Marketplace
                 </Link>
-                <Link to="/contact" className='navbar__item' style={linkStyle}>
-                    Contact
+                <Link to="/cart" className='navbar__item' style={linkStyle}>
+                    cart
                 </Link>
                 <Link to="/404" className='navbar__item' style={linkStyle}>
                     404

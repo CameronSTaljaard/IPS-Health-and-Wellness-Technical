@@ -39,6 +39,22 @@ const TempHome = () => {
                         </a>
                     </div>
                     ))}
+                    {products.map(product => (
+                        <div className="col-lg-3 col-md-4 col-6 card-bike-category">
+                        <a href={product.productID} className="d-block mb-4 h-100">
+                            <img src={product.productImage} loading="lazy" alt="" width="300px" height="220px" />
+                            <span>{product.productName}</span>
+                        </a>
+                    </div>
+                    ))}
+                    {products.map(product => (
+                        <div className="col-lg-3 col-md-4 col-6 card-bike-category">
+                        <a href={product.productID} className="d-block mb-4 h-100">
+                            <img src={product.productImage} loading="lazy" alt="" width="300px" height="220px" />
+                            <span>{product.productName}</span>
+                        </a>
+                    </div>
+                    ))}
 
                 </div>
             </div>

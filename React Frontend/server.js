@@ -40,26 +40,62 @@ const productDetails = [
   {
     productName: "White male T-shirt",
     productImage: "https://i.imgur.com/GzULnIp.jpg",
-    productPrice: "$25",
+    productPrice: 25,
+    productBrief: "Lorem ipsum",
     productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
   },
   {
     productName: "White female T-shirt",
     productImage: "https://i.imgur.com/LUvCUHb.jpg",
-    productPrice: "$22.5",
+    productPrice: 22.5,
+    productBrief: "Lorem ipsum",
     productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
   },
   {
     productName: "Black female T-shirt",
     productImage: "https://i.imgur.com/hqbaPcW.jpg",
-    productPrice: "$20",
+    productPrice: 20,
+    productBrief: "Lorem ipsum",
     productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+  }
+]
+
+const cartProducts = [
+  {
+    productName: "White male T-shirt",
+    productImage: "https://i.imgur.com/GzULnIp.jpg",
+    productPrice: 25,
+    productBrief: "Lorem ipsum",
+    productQuantity: 3,
+    id: 0
+  },
+  {
+    productName: "White female T-shirt",
+    productImage: "https://i.imgur.com/LUvCUHb.jpg",
+    productPrice: 22.5,
+    productBrief: "Lorem ipsum",
+    productQuantity: 2,
+    id: 1
+  },
+  {
+    productName: "Black female T-shirt",
+    productImage: "https://i.imgur.com/hqbaPcW.jpg",
+    productPrice: 20,
+    productBrief: "Lorem ipsum",
+    productQuantity: 1,
+    id: 2
   }
 ]
 
 app.use('/products', (req, res) => {
   res.send({
     products
+  })
+});
+
+app.use('/cart', (req, res) => {
+  res.send({
+    cartProducts
   })
 });
 

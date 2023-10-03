@@ -1,14 +1,15 @@
 import "../css/product.css"
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 
 const ProductPage = () => {
     const [products, setProducts] = useState([]);
     const { productID } = useParams();
+    const navigate = useNavigate();
 
     const fetchProductData = () => {
-        fetch("http://localhost:8080/product/" + productID)
+            fetch("http://localhost:8080/product/" + productID)
         .then(response => {
             return response.json()
         })
@@ -16,6 +17,9 @@ const ProductPage = () => {
                 setProducts(data);
                 console.log(data);
             })
+        .catch(error => {
+            navigate('/404', { replace: true })
+        })
     }
     
     useEffect(() => {

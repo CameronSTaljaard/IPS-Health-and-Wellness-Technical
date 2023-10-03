@@ -11,6 +11,7 @@ import Login from './components/Login';
 import TempHome from './components/TempHome';
 import useToken from './components/UseToken';
 import "./css/index.css";
+import Cart from './components/Cart';
 
 export default function App() {
   const { token, setToken } = useToken();
@@ -19,7 +20,6 @@ export default function App() {
       return <Login setToken={setToken} />
     }
 
-
     return (
       <BrowserRouter>
         <Routes>
@@ -27,6 +27,7 @@ export default function App() {
             <Route index element={<TempHome />} />
             <Route path="/product/:productID" element={<ProductPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
           <Route path="*" element={<LayoutNoNav />} >
             <Route path="*" element={<NoPage />} >
