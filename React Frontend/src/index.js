@@ -3,30 +3,27 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import LayoutNoNav from "./components/LayoutNoNav";
-import Home from "./components/Home";
 import ProductPage from './components/ProductPage';
 import Contact from "./components/Contact";
 import NoPage from "./components/NoPage";
 import Login from './components/Login';
-import TempHome from './components/TempHome';
-import useToken from './components/UseToken';
-import "./css/index.css";
+import ProductList from './components/ProductList';
 import Cart from './components/Cart';
+import "./css/index.css";
+import ProductCategories from './components/ProductCategories';
 
 export default function App() {
-  const { token, setToken } = useToken();
-
-    if (!token) {
-      return <Login setToken={setToken} />
-    }
 
     return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />} >
-            <Route index element={<TempHome />} />
+            <Route index element={<ProductCategories />} />
+            <Route path="/categories" element={<ProductCategories />} />
+            <Route path="/category/:productID" element={<ProductList />} />
             <Route path="/product/:productID" element={<ProductPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
           </Route>
           <Route path="*" element={<LayoutNoNav />} >

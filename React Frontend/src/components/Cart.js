@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+import { GetToken } from './UseToken';
 
 const Cart = () => {
-
     const [products, setProducts] = useState([])
     const [totalPrice, setTotal] = useState([])
     const [cartItems, setCartCount] = useState([])
+    const token = GetToken();
 
     const fetchCartData = () => {
-        fetch("http://localhost:8080/cart")
+        fetch("http://localhost:8080/cart/", {
+            method: "post",
+            headers: {
+                'Authorization': token
+            }
+        })
             .then(response => {
                 return response.json()
             })
@@ -88,7 +95,7 @@ const Cart = () => {
                                                 </div>
                                             </div>
                                         ))}
-                                        
+                                        -
 
                                     </div>
                                     <div className="col-lg-5">

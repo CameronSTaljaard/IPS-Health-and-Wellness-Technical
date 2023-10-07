@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import '../css/login.css';
 import PropTypes from 'prop-types';
+import '../css/login.css';
+import { useNavigate } from 'react-router-dom';
 
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
@@ -13,7 +14,8 @@ async function loginUser(credentials) {
     .then(data => data.json())
 }
 
-export default function Login({ setToken }) {
+export default function Login() {
+    const navigate = useNavigate();
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
     
@@ -24,6 +26,12 @@ export default function Login({ setToken }) {
           password
         });
         setToken(token);
+    }
+    
+    function setToken(token) {
+
+        localStorage.setItem('token', JSON.stringify(token));
+        navigate('/', { replace: true })
     }
 
     return(
@@ -44,6 +52,7 @@ export default function Login({ setToken }) {
     </div>
     )
 }
+
 
 Login.propTypes = {
     setToken: PropTypes.func.isRequired

@@ -1,27 +1,40 @@
 import "../css/product.css"
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
-
+import Login from "./Login";
+import { useToken } from "./UseToken";
 
 const ProductPage = () => {
+    const { token, setToken } = useToken();
+
+    useEffect(() => {
+        if (!token) {
+            token = <Login setToken={setToken} />
+        }
+    })
+    
     const [products, setProducts] = useState([]);
     const { productID } = useParams();
     const navigate = useNavigate();
 
     const fetchProductData = () => {
-            fetch("http://localhost:8080/product/" + productID)
-        .then(response => {
-            return response.json()
-        })
-        .then(data => {
-                setProducts(data);
-                console.log(data);
+        fetch("http://localhost:8080/product/" + productID, {
+            method: "post",
+            headers: new Headers({
+                'token': token
             })
-        .catch(error => {
-            navigate('/404', { replace: true })
         })
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                setProducts(data);
+            })
+            .catch(error => {
+                navigate('/404', { replace: true })
+            })
     }
-    
+
     useEffect(() => {
         fetchProductData()
     }, [])
