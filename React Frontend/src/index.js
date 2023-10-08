@@ -9,8 +9,8 @@ import NoPage from "./components/NoPage";
 import Login from './components/Login';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
-import "./css/index.css";
 import ProductCategories from './components/ProductCategories';
+import "./css/index.css";
 
 export default function App() {
 

@@ -2,13 +2,13 @@ import "../css/temphome.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { GetToken, useToken } from "./UseToken";
+import { GetToken } from "./UseToken";
 
 
 const ProductList = () => {
     const categoryID = useParams();
     const [products, setProducts] = useState([])
-    const token = GetToken();
+    var token = GetToken();
     const navigate = useNavigate();
 
     const FetchCategoryData = () => {
@@ -18,23 +18,26 @@ const ProductList = () => {
                 'token': token
             })
         })
-            .then(response => {
+        .then(response => {
+            if(response.ok) {
                 return response.json()
-            })
-            .catch(error => {
-                console.log(error)
-                navigate('/404', { replace: true })
-            })
+            } else {
+                navigate("/login?error=Login_Expired", {replace: true});
+            }     
+        })
     }
 
     const fetchProductData = () => {
         fetch("http://localhost:8080/products")
             .then(response => {
-                return response.json()
+                if(response.ok) {
+                    return response.json()
+                } else {
+                    navigate("/login?error=Login_Expired", {replace: true});
+                }     
             })
-            .then(data => {
-                console.log(data);
-                setProducts(data.products)
+            .then (response => {
+                setProducts(response.products);
             })
     }
 
@@ -53,22 +56,6 @@ const ProductList = () => {
                 <hr className="mt-2 mb-5"></hr>
                 <div className="row text-center text-lg-left">
 
-                    {products.map(product => (
-                        <div className="col-lg-3 col-md-4 col-6">
-                            <a href={product.productID} className="d-block mb-4 h-100">
-                                <img src={product.productImage} loading="lazy" alt="" width="300px" height="220px" />
-                                <span>{product.productName}</span>
-                            </a>
-                        </div>
-                    ))}
-                    {products.map(product => (
-                        <div className="col-lg-3 col-md-4 col-6">
-                            <a href={product.productID} className="d-block mb-4 h-100">
-                                <img src={product.productImage} loading="lazy" alt="" width="300px" height="220px" />
-                                <span>{product.productName}</span>
-                            </a>
-                        </div>
-                    ))}
                     {products.map(product => (
                         <div className="col-lg-3 col-md-4 col-6">
                             <a href={product.productID} className="d-block mb-4 h-100">

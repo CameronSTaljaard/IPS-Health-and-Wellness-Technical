@@ -11,11 +11,15 @@ app.use('/login', (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
   const response = "RealKeyHuh";
-  res.send({
-    token: response,
-    user: username,
-    pass: password
-  })
+  if (req.body.username != "abc") {
+    res.send([{
+      token: response,
+      user : "Useless info"
+    }])
+  } else {
+    res.status(401).send(
+      { error: "Invalid Login Credentials"})
+  }
 });
 
 const categories = [
@@ -112,6 +116,7 @@ app.use('/products', (req, res) => {
 });
 
 app.use('/categories', (req, res) => {
+  // res.status(401);
   res.send({
     categories
   })
@@ -125,7 +130,7 @@ app.use('/cart', (req, res) => {
 
 app.use('/category', (req, res) => {
   const slug = req.url.split('/').slice(1);
-    res.send(productDetails[slug]);
+  res.send(productDetails[slug]);
 });
 
 app.use('/product', (req, res) => {
