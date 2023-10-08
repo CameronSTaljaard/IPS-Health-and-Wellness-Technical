@@ -1,6 +1,8 @@
 # Technical Challenge IPS Health and Wellness
 
-This application is a simple marketplace simulation with an intergrated DB.
+This application is a simple marketplace using React 18, with an ASP.net 7 backend.
+JWT token's are used for enhanced security with a 30 minute expiry after login.
+By default, the token will last 30 minutes, so if you are logged out, please be aware that the reason is token expiry.
 
 ### For initial set up of the front end, simply run
 >npm install.
@@ -13,3 +15,10 @@ If the database is live, the application will work as expected from here.
 
 This application will run simply and emulates a basic marketplace.
 For details of the backend, please consult the corresponding README.md within that folder
+
+const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: token })
+    };
+    fetch('https://reqres.in/api/posts', requestOptions)

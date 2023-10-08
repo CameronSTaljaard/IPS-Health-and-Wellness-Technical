@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import LayoutNoNav from "./components/LayoutNoNav";
 import ProductPage from './components/ProductPage';
-import Contact from "./components/Contact";
 import NoPage from "./components/NoPage";
 import Login from './components/Login';
 import ProductList from './components/ProductList';
@@ -22,7 +21,6 @@ export default function App() {
             <Route path="/categories" element={<ProductCategories />} />
             <Route path="/category/:productID" element={<ProductList />} />
             <Route path="/product/:productID" element={<ProductPage />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
           </Route>

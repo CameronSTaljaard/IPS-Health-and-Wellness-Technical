@@ -12,31 +12,40 @@ const ProductList = () => {
     const navigate = useNavigate();
 
     const FetchCategoryData = () => {
-        fetch("http://localhost:8080/category/" + categoryID.productID, {
-            method: "post",
-            headers: new Headers({
-                'token': token
+        const requestOptions = {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                'Authorization': 'Bearer '.concat(token)
+            },
+        };
+        fetch("http://localhost:8080/category/" + categoryID.productID, requestOptions, {})
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    navigate("/login?error=Login_Expired", { replace: true });
+                }
             })
-        })
-        .then(response => {
-            if(response.ok) {
-                return response.json()
-            } else {
-                navigate("/login?error=Login_Expired", {replace: true});
-            }     
-        })
     }
 
     const fetchProductData = () => {
-        fetch("http://localhost:8080/products")
+        const requestOptions = {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                'Authorization': 'Bearer '.concat(token)
+            },
+        };
+        fetch("http://localhost:8080/products", requestOptions)
             .then(response => {
-                if(response.ok) {
+                if (response.ok) {
                     return response.json()
                 } else {
-                    navigate("/login?error=Login_Expired", {replace: true});
-                }     
+                    navigate("/login?error=Login_Expired", { replace: true });
+                }
             })
-            .then (response => {
+            .then(response => {
                 setProducts(response.products);
             })
     }

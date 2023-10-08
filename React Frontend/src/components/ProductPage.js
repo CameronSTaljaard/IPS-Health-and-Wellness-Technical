@@ -6,13 +6,21 @@ import Button from '@mui/material/Button';
 
 const ProductPage = () => {
     var token = useToken();
-    
+
     const [products, setProducts] = useState([]);
     const { productID } = useParams();
     const navigate = useNavigate();
 
     const fetchProductData = () => {
-        fetch("http://localhost:8080/product/" + productID, {
+        const requestOptions = {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                'Authorization': 'Bearer '.concat(token)
+            },
+            body: JSON.stringify({ "item": productID })
+        };
+        fetch("http://localhost:8080/product/" + productID, requestOptions, {
             method: "post",
             headers: new Headers({
                 'token': token
@@ -39,9 +47,9 @@ const ProductPage = () => {
             .then(response => {
                 if (response.ok) {
                     setProducts(response);
-                    return(response);
+                    return (response);
                 } else {
-                    navigate('/login?Invalid_Token', { replace: true })
+                    navigate('/login?error=Invalid_Token', { replace: true })
                 }
             })
             .catch(error => {

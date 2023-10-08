@@ -9,26 +9,28 @@ const ProductCategories = () => {
     const [categories, setCategories] = useState([])
     const navigate = useNavigate();
     const token = GetToken();
-    const [errorMessage, setErrorMessage] = useState();
 
     const FetchCategoryData = () => {
-        fetch("http://localhost:8080/categories", {
-            method: "post",
-            headers: new Headers({
-                'token': token
-            })
-        })
+        const requestOptions = {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                'Authorization': 'Bearer '.concat(token)
+            },
+            // body: JSON.stringify({ "item": productID })
+        };
+        fetch("http://localhost:8080/categories", requestOptions, {})
             .then(response => {
-                if(response.ok) {
+                if (response.ok) {
                     return response.json()
                 } else {
-                    navigate("/login?error=Login_Expired", {replace: true});
-                }     
+                    navigate("/login?error=Login_Expired", { replace: true });
+                }
             })
-            .then (response => {
+            .then(response => {
                 setCategories(response.categories);
             })
-        }
+    }
 
     useEffect(() => {
         FetchCategoryData()

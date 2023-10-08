@@ -1,22 +1,30 @@
 import React, { useEffect, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { GetToken } from './UseToken';
+import Button from '@mui/material/Button';
 
 const Cart = () => {
     const [products, setProducts] = useState([])
     const [totalPrice, setTotal] = useState([])
     const [cartItems, setCartCount] = useState([])
+    const navigate = useNavigate();
     const token = GetToken();
 
     const fetchCartData = () => {
-        fetch("http://localhost:8080/cart/", {
-            method: "post",
+        const requestOptions = {
+            method: 'POST',
+            mode: "cors",
             headers: {
-                'Authorization': token
-            }
-        })
+                'Authorization': 'Bearer '.concat(token)
+            },
+        };
+        fetch("http://localhost:8080/cart/", requestOptions, {})
             .then(response => {
-                return response.json()
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    navigate("/login?token_expired", { replace: true });
+                }
             })
             .then(data => {
                 setProducts(data.cartProducts);
@@ -24,6 +32,27 @@ const Cart = () => {
                 calculateTotalProducts(data.cartProducts);
             })
     }
+
+    function removeFromCart(productID) {
+        const requestOptions = {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                'Authorization': 'Bearer '.concat(token)
+            },
+            body: JSON.stringify({ "item": productID })
+        };
+        fetch("http://localhost:8080/cart/remove", requestOptions, {})
+            .then(response => {
+                if (response.ok) {
+                    navigate("/cart", { replace: true })
+                } else {
+                    navigate("/login?token_expired", { replace: true });
+                }
+                return response.json()
+            })
+    }
+
 
     const calculateTotal = (data) => {
         var total = 0;
@@ -35,7 +64,7 @@ const Cart = () => {
 
     const calculateTotalProducts = (data) => {
         setCartCount(data.length);
-    } 
+    }
 
     useEffect(() => {
         fetchCartData()
@@ -89,6 +118,10 @@ const Cart = () => {
                                                                 {/* Product Price */}
                                                                 <h5 className="mb-0">${cartProduct.productPrice}</h5>
                                                             </div>
+                                                            <div style={{ width: "80px" }}>
+                                                                {/* Remove from Cart */}
+                                                                <Button type="submit" variant="outlined" onClick={() => removeFromCart(cartProduct.id)}>X</Button>
+                                                            </div>
                                                             <a href="#!" style={{ color: "#cecece" }}><i className="fas fa-trash-alt"></i></a>
                                                         </div>
                                                     </div>
@@ -100,7 +133,7 @@ const Cart = () => {
                                     </div>
                                     <div className="col-lg-5">
 
-                                        <div className="card text-white rounded-3" style={{backgroundColor: "rgb(130, 83, 177)"}}>
+                                        <div className="card text-white rounded-3" style={{ backgroundColor: "rgb(130, 83, 177)" }}>
                                             <div className="card-body">
                                                 <div className="d-flex justify-content-between align-items-center mb-4">
                                                     <h5 className="mb-0">Card details</h5>
@@ -156,7 +189,7 @@ const Cart = () => {
                                                     <p className="mb-2">${totalPrice}</p>
                                                 </div>
 
-                                                <button type="button" className="btn btn-block btn-lg" style={{backgroundColor: "rgb(215, 183, 247)"}}>
+                                                <button type="button" className="btn btn-block btn-lg" style={{ backgroundColor: "rgb(215, 183, 247)" }}>
                                                     <div className="d-flex justify-content-between">
                                                         <span>Checkout <i className="fas fa-long-arrow-alt-right ms-2"></i></span>
                                                     </div>
