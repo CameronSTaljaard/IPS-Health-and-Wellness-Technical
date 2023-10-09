@@ -61,5 +61,3 @@ const ProductCategories = () => {
         </div>
     )
 };
-
-export default ProductCategories;
