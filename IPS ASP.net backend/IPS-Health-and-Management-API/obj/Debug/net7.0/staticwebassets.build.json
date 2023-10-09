@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "oEF/GXJlCnxQBkGjRFiFfKjw4/AcGu3xG4vh5toaOHc=",
+  "Source": "IPS-Health-and-Management-API",
+  "BasePath": "_content/IPS-Health-and-Management-API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

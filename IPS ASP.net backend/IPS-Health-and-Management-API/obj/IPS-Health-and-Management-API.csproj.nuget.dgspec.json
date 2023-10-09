@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Yuuki\\OneDrive\\Desktop\\IPS Health Challenge\\IPS-Health-and-Wellness-Technical\\IPS ASP.net backend\\IPS-Health-and-Management-API\\IPS-Health-and-Management-API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Yuuki\\OneDrive\\Desktop\\IPS Health Challenge\\IPS-Health-and-Wellness-Technical\\IPS ASP.net backend\\IPS-Health-and-Management-API\\IPS-Health-and-Management-API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yuuki\\OneDrive\\Desktop\\IPS Health Challenge\\IPS-Health-and-Wellness-Technical\\IPS ASP.net backend\\IPS-Health-and-Management-API\\IPS-Health-and-Management-API.csproj",
+        "projectName": "IPS-Health-and-Management-API",
+        "projectPath": "C:\\Users\\Yuuki\\OneDrive\\Desktop\\IPS Health Challenge\\IPS-Health-and-Wellness-Technical\\IPS ASP.net backend\\IPS-Health-and-Management-API\\IPS-Health-and-Management-API.csproj",
+        "packagesPath": "C:\\Users\\Yuuki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yuuki\\OneDrive\\Desktop\\IPS Health Challenge\\IPS-Health-and-Wellness-Technical\\IPS ASP.net backend\\IPS-Health-and-Management-API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Yuuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Users\\Yuuki\\OneDrive\\Desktop\\Code\\Euphoria.nuget.local": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/EuphoriaTelecom/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

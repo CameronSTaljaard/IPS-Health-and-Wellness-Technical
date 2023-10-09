@@ -1,0 +1,56 @@
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\IPS-Health-and-Management-API.deps.json
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\IPS-Health-and-Management-API.runtimeconfig.json
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\appsettings.Development.json
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\appsettings.json
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\IPS-Health-and-Management-API.exe
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\IPS-Health-and-Management-API.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.Data.SqlClient.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.Identity.Client.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\IPS-Health-and-Management-API.pdb
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\obj\Debug\docker-compose.dcproj.CopyComplete
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\image_seed_data.json
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Newtonsoft.Json.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Users\claud\Source\Repos\IPS-Health-and-Management-API\bin\Debug\Microsoft.OpenApi.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\appsettings.Development.json
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\appsettings.json
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\image_seed_data.json
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\IPS-Health-and-Management-API.deps.json
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\IPS-Health-and-Management-API.runtimeconfig.json
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\IPS-Health-and-Management-API.exe
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\IPS-Health-and-Management-API.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.OpenApi.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\bin\Debug\IPS-Health-and-Management-API.pdb
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\Yuuki\OneDrive\Desktop\IPS Health Challenge\IPS-Health-and-Wellness-Technical\IPS ASP.net backend\obj\Debug\docker-compose.dcproj.CopyComplete

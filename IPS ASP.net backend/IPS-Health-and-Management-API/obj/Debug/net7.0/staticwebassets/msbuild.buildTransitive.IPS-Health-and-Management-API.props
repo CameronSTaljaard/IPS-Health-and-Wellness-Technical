@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\IPS-Health-and-Management-API.props" />
+</Project>

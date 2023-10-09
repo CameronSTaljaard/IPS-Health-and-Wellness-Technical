@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+    ips-health-and-management-api:
+        image: ${DOCKER_REGISTRY-}ipshealthandmanagementapi
+        build:
+          context: .
+          dockerfile: IPS-Health-and-Management-API/Dockerfile
+        ports:
+            - "5001:80"
+            - "5000:443"
+
+    ips-health-and-management-db:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        environment:
+            - SA_PASSWORD=YourStrong!Passw0rd
+            - ACCEPT_EULA=Y
+        ports:
+            - "1433:1433"
+        
