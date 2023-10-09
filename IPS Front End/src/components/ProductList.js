@@ -69,8 +69,8 @@ const ProductList = () => {
                     {products.map(product => (
                         <div className="product-container col-lg-3 col-md-4 col-6">
                             <a onClick={()=>navigate(`/product/${product.id}`, { replace:true })} className="d-block mb-4 h-100">
-                                <img src={product.imageData} loading="lazy" alt="" width="240px" />
-                                <span>{product.name}</span>
+                                <img src={product.imageData} loading="lazy" alt="" height="280px"/>
+                                <div>{product.name}</div>
                                 <div>{product.shortDescription}</div>
                             </a>
                         </div>

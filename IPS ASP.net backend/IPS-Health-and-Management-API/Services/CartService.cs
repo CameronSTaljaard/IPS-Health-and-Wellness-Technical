@@ -31,7 +31,7 @@ namespace IPS_Health_and_Management_API.Services
             if (product == null) { throw new ArgumentException("Product Invalid"); }
 
             // check if cart already exists for user
-            var cart = cartRepo.Get(x => x.IsActive == true, includeProperties: "CartProducts,CartProducts.Product").FirstOrDefault();
+            var cart = cartRepo.Get(x => x.UserId == userId && x.IsActive == true, includeProperties: "CartProducts,CartProducts.Product").FirstOrDefault();
             if (cart == null) { cart = CreateCart(user.Id); }
 
             // check if cart has that product already
@@ -69,7 +69,8 @@ namespace IPS_Health_and_Management_API.Services
         public List<CartProductResponse> GetCart(int userId)
         {
             var cart = cartRepo.Get(x => x.UserId == userId && x.IsActive == true, includeProperties: "CartProducts,CartProducts.Product,CartProducts.Product.ProductStocks").FirstOrDefault();
-            if(cart == null) { throw new ArgumentException("User Invalid"); }
+
+            if(cart == null) { return new List<CartProductResponse>(); }
 
             return cart.CartProducts.Select(prod =>
                 new CartProductResponse

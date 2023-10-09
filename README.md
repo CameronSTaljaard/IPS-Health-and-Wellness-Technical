@@ -16,6 +16,8 @@ If the database is live, the application will work as expected from here.
 ### To run the front end:
 > npm start
 
+We advise you use Chrome, and not Firefox to avoid any CORS issues.
+
 ### To run the backend:
 
 Ensure you have docker installed and open.

@@ -41,11 +41,10 @@ h5 {
   justify-content: left;
   align-content: flex-start;
   min-width: 0;
+  margin-top: 50px;
 }
 
-.product-container {
-  max-height: 300px;
-  height: 300px;
-  width: 300p
-
+.product-image {
+  height: auto;
+  float: right;
 }
